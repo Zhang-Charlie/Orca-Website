@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+ <html lang="en">
+  
+<!-- Author = Charlie Zhang -->
+<!-- Class = Csca -->
+<!-- Last updated = 17/04/2023 -->
+<!-- HTML5 -->
+
+
+<!-- This is the Contact page of the website-->
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orca Oasis - Contact</title>
+
+  <!-- Link to the CSS stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Orca Logo/Icon -->
+  <link rel="icon" href="img/orca.png" type="image/png">
+
+  <!-- Search Engine Optimization (SEO) -->
+  <meta name="description" content=" contact details, table of different type of species orcas, message us form,topics include habitat preservation, volunteering, donations, select region you are in asia, central america, europe, middle ear, north america, pacific, what age group you are in,0-20, 21-50, 51 or older, subcribe to our newsletter ">
+  <meta name="keywords" content="orca, orcas, killer whale, blackfish, marine mammals, conservation, sea life, whales, contact, contact us, email, phone Number, diet">
+  <meta name="author" content="Charlie Zhang">
+
+  </head>
+
+<body>
+  <!-- Navigation and Burger menu -->
+  <nav>
+    <input type="checkbox" id="burger-menu"> 
+    <!-- &#9776 is hamburger icon -->
+    <label for="burger-menu">&#9776;</label>
+    <ul>
+      <!-- Logo image functions as a link -->
+      <li class='logo'> <a href="index.html"><img src="img/orca.png" alt = "Orca Logo"></a></li>
+      <li><a class = "psu" href="index.html">Home</a></li>
+      <li><a class ="psu" href="About.html">About</a></li>
+      <li><a class ="psu" href="Contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<!-- Contact Us section -->
+<section>
+  <div class="box">
+    <h2 class="center-text">Contact Us</h2>
+    <div class="split">
+      <div>
+        <p>Email = Orca@Orca.ie</p>
+      </div>
+      <div>
+        <p>Phone Number = 083 333 3333
+
+        </p>
+      </div>
+      <div>
+        <p> Our Address = 12 Orca Way, Blackrock, Dublin, Ireland
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Table about Orcas -->
+<div>
+  <h2 class="center-text">Orca Table</h2>
+
+<table class="table">
+  <tr>
+    <th rowspan="2">Species</th>
+    <th colspan="2">Physical Characteristics</th>
+    <th rowspan="2">Diet</th>
+  </tr>
+  <tr>
+    <th>Size</th>
+    <th>Weight</th>
+  </tr>
+  <tr>
+    <td>Resident Orcas</td>
+    <td>6-8 meters</td>
+    <td>3-6 tons</td>
+    <td>Primarily fish, especially salmon</td>
+  </tr>
+  <tr>
+    <td>Transient Orcas</td>
+    <td>6-8 meters</td>
+    <td>3-6 tons</td>
+    <td>Marine mammals, such as seals and sea lions</td>
+  </tr>
+  <tr>
+    <td>Offshore Orcas</td>
+    <td>6-9 meters</td>
+    <td>4-7 tons</td>
+    <td>Sharks and rays, as well as fish and squid</td>
+  </tr>
+</table>
+</div>
+
+
+<!-- Form for message us -->
+<section>
+<h2 class="center-text">Message Us</h2>
+
+<form action="submit-form.php" method="post">
+  <!-- Input for full name -->
+  <label for="name">Full Name:<span>*</span></label>
+  <input type="text" id="name" name="name" required><br><br>
+  <!-- Input for email -->
+  <label for="email">Email:<span>*</span></label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <!-- Dropdown Menu -->
+  <label for="topic">Topic:<span>*</span></label>
+  <select id="topic" name="topic" required>
+    <option value="" disabled selected>Select an option</option>
+    <option value="Habitat Preservation">Habitat Preservation</option>
+    <option value="Volunteering">Volunteering</option>
+    <option value="Donations">Donations</option>
+  </select><br><br>
+ 
+
+<!-- List Menu -->
+<div>
+  <label for ="regionselect" class = "label">Select the Region you are from:<span>*</span></label>
+  <div class="select">
+  <select name = "regionselect" id = "regionselect" size="4" required>
+  <option value = "Afr">Africa</option>
+  <option value = "Asia">Asia</option>
+  <option value = "CA">Central America</option>
+  <option value = "Eu">Europe</option>
+  <option value = "ME">Middle East</option>
+  <option value = "NA">North America</option>
+  <option value = "Pa">Pacific</option>
+  <option value = "SA">South America</option>
+  </select>
+  </div> <!--end of class select-->
+  </div>
+
+<!-- Submit Button -->
+  <div>
+    <label for = "age_group" class = "label">Select your age group:<span>*</span></label>
+    <div class="radioholder"> 
+    <label for = "age_group" class="radio">
+    <input type ="radio" name= "age_group" id = "age_group" value = "0-20" required> 0-20</label>
+    <label for = "age_group2" class="radio">
+    <input type = "radio" name = "age_group" id = "age_group2" value ="21-50">21-50</label>
+    <label for = "age_group3" class="radio">
+    <input type = "radio" name = "age_group" id = "age_group3" value ="51orolder">51 or older </label>
+  </div>
+</div>
+
+  <!-- Text box area for comments/messages -->
+  <div>
+    <label for = "message" class = "label">Message:</label>
+    <textarea name= "message" id = "message" cols= "40" rows = "5" >Your comments here</textarea>
+  </div>
+  <!-- Checkbox for subscribe to our newsletter -->
+  <div>
+    <label for="newsletter">Subscribe to our newsletter:</label>
+    <input type="checkbox" id="newsletter" name="newsletter" value="yes"><br><br>
+  </div>
+  <!-- Submit Button -->
+  <button type="submit">Submit</button>
+</form>
+</section>
+
+<!-- Footer with Logo image and the creators name with copyright symbol -->
+  <footer>
+    <img class="footer-logo" src="img/orca.png" alt="Logo">
+    <p>&copy; by Charlie Zhang</p>
+  </footer>
+</body>
+
+</html> 
