@@ -1,0 +1,318 @@
+/* Defines font family, weight, size, and line height for the body of the page */
+body {
+  font-family: var(--ff-primary); /* links back to primarys color*/
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 1.6;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+/* Defines variables to be used throughout the stylesheet */
+:root {
+  --clr-primary-200: #36c4a5; /* Turqoise */
+  --clr-primary-400: rgb(80, 0, 209); /* Purple */
+
+  --clr-neutral-100: #fff; /* White */
+  --clr-neutral-900: #8d1425; /* Red */
+
+  --ff-primary: "Elephant" sans-serif;
+  --ff-accent: "Cooper Black", serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,h1,h2,h3,p {
+  margin: 0;
+}
+
+h1,h2,h3 {
+  color: var(--clr-primary-400); /* links back to primarys color*/
+  font-family: var(--ff-accent); /* links back to accent*/
+  font-weight: 900;
+  line-height: 1;
+}
+
+h2,h3,p {
+  margin-bottom: 1em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.center-text {
+  text-align: center;
+}
+
+header,
+section {
+  padding: 4rem 0;
+}
+
+
+@media (min-width: 40em) {
+    header,
+    section {
+      padding: 7rem 0;
+    }
+    
+  }
+
+/* Set margin and width for .box element */
+.box {
+  margin-inline: auto;
+  width: min(90%, 70.5rem);
+}
+
+.split {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .split {
+    flex-direction: row;
+  }
+
+  .split > * {
+    flex-basis: 100%;
+  }
+
+  .split > * + * {
+    margin-left: 2em;
+  }
+}
+
+.box--narrow {
+  max-width: 34rem;
+}
+
+.bg-light {
+  background-color: var(--clr-primary-200);/* links back to primarys color*/
+}
+
+.bg-primary {
+  color: var(--clr-neutral-100);/* links back to neurtral color*/
+  background-color: var(--clr-primary-400);/* links back to primarys color*/
+}
+
+.bg-dark {
+  color: var(--clr-neutral-100);  /* links back to neutral color*/
+  background-color: var(--clr-neutral-900); /* links back to neutral color*/
+}
+
+.bg-primary h2,
+.bg-dark h2 {
+  color: var(--clr-primary-200);  /* links back to primarys color*/
+}
+
+
+/* Footer  */
+footer {
+  background-color: rgb(0, 0, 0); /* Black */
+  color: #ffffff; /* White */
+  padding: 20px; /* adds 20 pixels of space around the content inside the footer. */
+  padding-bottom: 30px; /* adds an extra 10 pixels of space below the content. */
+  text-align: right; /*aligns the text to the right. */
+}
+
+/* Footer logo */
+.footer-logo {
+  padding-top: 30px; /* adds 30 pixels of space above the element's content. */
+  width: 90px; 
+  margin-bottom: 30px; /* adds 30 pixels of space below the element. */
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* distributes element of container horizontally with equal space */
+}
+
+ul {
+  list-style: none; /* removes the default bullet points or numbering of the list items. */
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin-left: 1em;
+}
+
+/* Logo in navagation */
+nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  
+}
+
+/* Buger Menu */
+#burger-menu {
+  display: none;
+}
+
+/* Buger Menu */
+@media screen and (max-width: 600px) {
+  #burger-menu:checked ~ ul {
+    display: block;
+  }
+
+  ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  li {
+    margin-top: 1em;
+    margin-left: 0;
+  }
+}
+
+/* Links on the navagation bar */
+.psu:link {
+  text-decoration: none;
+}
+
+.psu:hover{
+  color: #0b3f8d; /* Blue */
+  text-decoration: underline; /* Underlines text */
+}
+
+/* When you hover over words on the navagation bar it turns red */
+.psu:hover{
+  color: #9e091c; /* Red */
+  font-size: 100%
+}
+
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Form styles */
+form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  display:flex; /* on parent container */
+  flex-direction:column; 
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+/* Styling for input fields */
+input[type="text"],
+input[type="email"],
+select,textarea {
+  width: 40%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888888;
+  margin-bottom: 10px;
+}
+
+/* Styling for checkboxes */
+input[type="checkbox"] {
+  display: inline-block; /* Changes the display behavior of the element from the default block level element to an inline-block level element. */
+  margin-right: 5px;
+  width:20px;
+  height:20px;
+}
+
+/* Styling for submit button */
+button[type="submit"] {
+  background-color: #6110ca; /* purple */
+  color: rgb(255, 255, 255); /* white */
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100px;
+}
+
+
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+  /* Set font size for text input fields, email input fields, select elements, textareas and sets the padding */
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    font-size: 16px;
+    padding: 8px;
+    margin-bottom: 5px;
+  }
+  /* Set font size for submit button and sets the padding */
+  button[type="submit"] {
+    font-size: 14px;
+    padding: 8px 16px;
+    
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 600px) {
+  
+  form {
+    padding: 20px;
+  }
+  /* Set font size for text input fields, email input fields, select elements, and textareas */
+  input[type="text"],
+  input[type="email"],
+  select, textarea {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Selects the button element with a "submit" type attribute */
+  button[type="submit"] {
+    font-size: 16px;
+    padding: 10px 20px;
+    flex:2;
+  }
+}
+
+div input {
+  padding: 5px;
+}
+/* for the table */
+table{
+  border: 1px solid #000000;
+  border-collapse:collapse;
+  width:90%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* for the table */
+table td, table th{
+  border: 1px solid #000000; 
+  vertical-align: middle; 
+}
+
+/* For the multimedia application */
+iframe {
+  border: none;
+}
+/* For the multimedia application */
+.youtube{
+  text-align: center;
+}
