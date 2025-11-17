@@ -3,6 +3,8 @@
 A simple multi page website about orcas that I built **to learn HTML**, practice basic **CSS**, and experiment with very light **JavaScript**.  
 The project helped me understand how real websites are structured, how pages link together, and how to organise files properly.
 
+![Orca Preview](img/preview_orca.jpg)
+
 🔗 **Live site**  
 https://orca-website-nine.vercel.app/
 
